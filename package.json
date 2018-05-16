@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/tone": "Tonejs/TypeScript",
+    "tone": "^0.11.11"
+  },
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}

@@ -1,0 +1,37 @@
+<html>
+<style>
+    .bar {
+        position: absolute;
+        border: solid 1px transparent;
+    }
+
+    .bar.total {
+        border: solid 1px #ccc;
+    }
+
+    .bar.transfer {
+        background: rgba(0, 128, 0, 0.33);
+    }
+
+    #progress {
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: purple;
+    }
+
+    body {
+        zoom: 0.3;
+    }
+</style>
+<script src="Tone.min.js"></script>
+<script src="require.js"></script>
+<script src="main.js"></script>
+<script>
+    require(['index'], function () { })
+</script>
+<div id="progress"></div>
+
+</html>
