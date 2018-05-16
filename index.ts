@@ -28,11 +28,6 @@ Tone.Transport.stop();
 let topOffset = Infinity;
 let endValue = -Infinity;
 
-window.addEventListener("click", () => {
-  raf();
-  Tone.Transport.start();
-});
-
 function raf() {
   const audioProgress = Tone.Transport.seconds / audioEndSeconds;
   progressBar.style.top = audioProgress * (endValue - topOffset) + "px";
@@ -170,3 +165,8 @@ const instruments = columns.map((_, i) => {
 
 const audioEndSeconds = (endValue - topOffset) / audioLengthScalar;
 document.body.appendChild(fragment);
+
+(window as any)["play"] = function() {
+  raf();
+  Tone.Transport.start();
+}
